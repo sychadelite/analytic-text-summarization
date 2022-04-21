@@ -1,0 +1,432 @@
+Salah satu proses yang dilakukan dalam
+peringkasan dokumen adalah proses ekstraksi ciri. Berdasarkan
+beberapa penelitian, metode Tf-Idf adalah metode yang sering
+digunakan dalam proses ekstraksi ciri karena menghasilkan
+akurasi yang baik. Akan tetapi, ada metode lain yaitu metode
+dengan skema LGN yang disampaikan oleh Erica dan diklaim
+lebih baik dari pada Tf-Idf. Oleh karena itu dalam penelitian ini
+dilakukan pengujian secara statistik terhadap penggunaan
+metode term weighting Tf-Idf dan LGN. Hasil pengujian
+menunjukkan bahwa tidak ada perbedaan yang signifikan
+antara akurasi hasil peringkasan menggunakan metode Tf-Idf
+dengan LGN. Berdasarkan hal ini maka dalam peringkasan teks
+otomatis metode Tf-Idf ataupun LGN dapat digunakan sebagai
+metode ekstraksi ciri.
+
+Menurut kamus Oxford English Dictionary1, meringkas
+otomatis adalah membuat versi singkat dari suatu dokumen
+dengan menggunakan komputer. Hasil dari proses ini adalah
+poin-poin penting dari teks asli. Karen Spark Jones
+menyampaikan bahwa meringkas dokumen teks adalah proses
+kompresi yang melibatkan hilangnya informasi. Proses
+peringkasan dilakukan secara otomatis dengan algoritma atau
+sistem komputer[1].
+Untuk memilih kalimat yang akan dijadikan ringkasan,
+dapat dilakukan dengan cara sentence extraction atau dengan
+cara mengekstraksi terlebih dahulu kalimat dari teks yang akan
+diringkas. Sentence extraction atau ekstraksi kalimat mulai
+dilakukan oleh Luhn tahun 1958 yang menyatakan bahwa
+pentingnya suatu kalimat didasarkan pada frekuensi kata [2].
+Metode ekstraksi kalimat yang tepat akan memberikan
+pengaruh yang kuat terhadap kinerja sistem. Sampai saat ini,
+hal tersebut masih banyak dilakukan pada penelitian-penelitian
+lain, seperti pada penelitian dalam sistem information retrieval,
+document clustering, summarization, text mining, dan
+pemrosesan bahasa alami lainnya [3] [4][5].
+Pendekatan ekstraksi kalimat yang paling popular hingga
+saat ini adalah metode Tf-Idf[6]. Ide dasar dari Tf-Idf adalah
+mengurangi bobot kata-kata yang sering terjadi dengan cara membandingkan frekuensi proporsionalnya dalam kumpulan
+dokumen. Properti ini telah membuat Tf-Idf menjadi salah satu
+istilah yang digunakan secara universal dalam peringkasan
+ekstraktif [7][8][9][10][11]. Metode ekstraksi kalimat ini
+termasuk ke dalam salah satu skema LGN. Erica Chrisholm
+dan Tamara Kolda melakukan penelitian yang membandingkan
+beberapa kombinasi LGN dalam sistem temu kembali. Hasil
+penelitian ini menunjukkan bahwa kombinasai LGN
+menghasilkan akurasi yang lebih baik dari pada Tf-Idf [12].
+Hasil yang berbeda ditunjukkan pada beberapa penelitian lain.
+Dalam penelitian Man Lan dkk. Tf.-Idf digunakan untuk kasus
+pengelompokan teks. Dari hasil penelitian tersebut diperoleh
+fakta Tf-Idf tidak secara konsisten menunjukkan hasil yang
+baik[13][14].
+Oleh karena itu, dalam penelitian ini akan dievaluasi
+kinerja Tf-Idf dengan skema LGN lain secara statistik.
+Penelitian ini akan membuktikan secara signifikan bahwa
+penggunaan Tf-Idf akan menghasilkan kualitas ringkasan yang
+lebih baik daripada LGN [15]. Pengujian dilakukan dengan
+cara mengukur kualitas ringkasan yang dihasilkan. Adapun,
+kualitas ringkasan akan diuji dari nilai akurasi. membandingkan frekuensi proporsionalnya dalam kumpulan
+dokumen. Properti ini telah membuat Tf-Idf menjadi salah satu
+istilah yang digunakan secara universal dalam peringkasan
+ekstraktif [7][8][9][10][11]. Metode ekstraksi kalimat ini
+termasuk ke dalam salah satu skema LGN. Erica Chrisholm
+dan Tamara Kolda melakukan penelitian yang membandingkan
+beberapa kombinasi LGN dalam sistem temu kembali. Hasil
+penelitian ini menunjukkan bahwa kombinasai LGN
+menghasilkan akurasi yang lebih baik dari pada Tf-Idf [12].
+Hasil yang berbeda ditunjukkan pada beberapa penelitian lain.
+Dalam penelitian Man Lan dkk. Tf.-Idf digunakan untuk kasus
+pengelompokan teks. Dari hasil penelitian tersebut diperoleh
+fakta Tf-Idf tidak secara konsisten menunjukkan hasil yang
+baik[13][14].
+Oleh karena itu, dalam penelitian ini akan dievaluasi
+kinerja Tf-Idf dengan skema LGN lain secara statistik.
+Penelitian ini akan membuktikan secara signifikan bahwa
+penggunaan Tf-Idf akan menghasilkan kualitas ringkasan yang
+lebih baik daripada LGN [15]. Pengujian dilakukan dengan
+cara mengukur kualitas ringkasan yang dihasilkan. Adapun,
+kualitas ringkasan akan diuji dari nilai akurasi.
+
+Untuk memberikan gambaran utuh tentang pengujian
+hipotesis yang dilakukan, berikut pada Gambar 1 adalah
+gambaran metode penelitian yang dilakukan. Secara garis
+besar ada empat tahapan yang dilakukan yaitu: pra proses,
+ekstraksi fitur, peringkasan otomatis dan pengujian secara
+statistik.
+Tahapan pra proses yang digunakan adalah tokenizing,
+case folding dan filtering. Data yang telah melalui tahapan pra
+proses akan diekstraksi dengan menggunakan Tf-Idf dan
+LGN. Setelah dilakukan ektraksi fitur, diperoleh nilai bobot
+tiap kalimat. Nilai bobot yang diperoleh lalu dirangking dari
+yang terbesar hingga terkecil. Kalimat yang akan menjadi
+kandidat ringkasan adalah kalimat yang memiliki nilai bobot
+terbesar. Dalam penelitian ini digunakan kompresi ringkasan
+sebesar 50%. Hasil ringkasan dikomparasi dengan hasil
+ringkasan yang dilakukan oleh ahli bahasa untuk kemudian
+dihitung nilai akurasinya. Nilai akurasi dari masing-masing
+penggunaan metode Tf-Idf dan LGN inilah yang akan diuji
+dengan menggunakan uji statistik.
+Dokumen yang digunakan adalah bagian latar belakang
+skripsi mahasiswa teknik informatika. Dokumen tersebut
+sudah dalam format txt. Setiap dokumen akan melalui tahapan
+dari pra proses. Dalam penelitian ini, selain stop word, angka
+dan tanda baca akan diabaikan.
+Setelah melalui tahap pra proses, token atau term
+digunakan untuk memperoleh nilai Term Weighting baik TfIdf maupun skema LGN lainnya. Dalam hal ini skema LGN
+yang akan digunakan sebagai pembanding adalah skema
+SQRT - IGFS – COSN. Skema ini digunakan karena dianggap
+paling baik dalam penelitian [12]. Metode penelitian dapat
+dilihat pada Gambar 1.
+
+A. Term Frequency-Inverse document frequency
+Term frequency-Inverse document frequency atau lebih
+dikenal sebagai Tf-Idf adalah ekstraksi kalimat dengan cara
+memberikan nilai atau bobot pada kata. Pembobotan kata yang
+dimaksudkan bertujuan untuk mencerminkan betapa
+pentingnya sebuah kata dalam sebuah kumpulan dokumen
+atau korpus[16]. Metode ini sering digunakan sebagai faktor
+pembobotan dalam information retrieval, text mining, dan user
+modeling. Nilai Tf-Idf meningkat secara proporsional
+berdasarkan berapa kali sebuah kata muncul dalam dokumen.
+Hal tersebut membantu menyesuaikan fakta bahwa secara
+umum beberapa kata lebih sering muncul. Namun hal ini sering
+diimbangi oleh frekuensi kata dalam corpus. Saat ini, Tf-Idf
+adalah salah satu skema pembobotan yang paling populer.
+Menurut literatur survei yang dilakukan Joran Beel dkk. 83%
+sistem rekomendasi berbasis teks dalam domain perpustakaan
+digital menggunakan Tf-Idf[17].
+Persamaan Tf-Idf yang digunakan dapat dilihat pada
+persamaan (1) dan (2) sebagai berikut:
+yang mana 𝑇𝑓adalah variabel Term frequency, 𝑓𝑡,𝑑 adalah nilai
+frekuensi kemunculan kata t dalam dokumen d. Perhitungan
+Inverse Document Frequency (IDF) ditunjukkan pada
+persamaan (2).
+dengan variabel N adalah jumlah dokumen yang digunakan dan
+𝑛𝑖 adalah jumlah dokumen di mana kata i muncul. Berdasarkan
+kedua persamaan tersebut maka Tf-Idf dinyatakan sebagai
+𝑇𝑓 × 𝐼𝑑𝑓 [18]. Gambar 2. adalah proses perhitungan Tf-Idf
+dalam sistem peringkasan otomatis. Keluaran dari hasil Tf-Idf
+dapat dianggap sebagai bobot dari setiap kata dalam setiap
+kalimat.
+Setiap token kalimat atau berupa kata dalam suatu
+dokumen akan ditentukan jumlah setiap term dalam setiap
+kalimat. Contohnya, jumlah kalimat dalam suatu latar
+belakang skripsi adalah 8. Jumlah kata “algoritma” yang
+muncul dalam kalimat merupakan Tf secara berturut-turut
+adalah {2,0,1,1,2,2,1,0}. Nilai N = 8, nilai ni = 6. Berdasarkan
+hal tersebut, maka nilai global (Idf) = log(8/6) = 0,124939 dan
+setiap kalimat memiliki nilai Tf-Idf berturut-turut
+{0,249877473; 0; 0,124938737; 0,124938737; 0,249877473;
+0,249877473; 0; 0,124938737}.
+B. Local Global Normalization
+Local, Global and Normalization atau LGN adalah metode
+pembobotan yang mempertimbangkan faktor lokal, faktor
+global dan faktor normalisasi untuk dokumen[12]. Faktor lokal
+untuk menyatakan berapa banyak tiap kata muncul dalam
+sebuah dokumen, faktor global adalah fungsi untuk
+menghitung berapa kali tiap kata muncul dalam seluruh
+dokumen, dan faktor normalisasi adalah kompensasi terhadap
+panjang dokumen yang berbeda-beda [12].
+Setiap elemen dalam LGN baik lokal, global maupun
+normalisasi memiliki beberapa skema. Dalam penelitian ini,
+untuk memperoleh faktor/bobot lokal digunakan persamaan
+(3), bobot global yang digunakan adalah persamaan (4) dan
+bobot normalisasi digunakan persamaan (5). Ketiga
+persamaan tersebut menggunakan skema SQRT -IGFS -
+COSN[12].
+dimana 𝐿𝑖 adalah nilai lokal dari kata ke-i. 𝐹𝑖𝑗 adalah frekuensi
+kata ke-i dalam dokumen j.
+𝐺𝑖 adalah nilai global dari kata ke-i, 𝐹𝑖 menyatakan frekuensi
+kata ke-i dalam seluruh dokumen. Bobot normalisasi
+menggunakan persamaan (5) dimana 𝑁𝑖 adalah nilai
+normalisasi dari kata ke-i.
+Bobot normalisasi adalah hasil bagi satu dengan magnitude
+bobot vektor dokumen. Dengan cara ini maka memaksa
+besarnya bobot vektor dokumen menjadi satu. Hal ini
+memungkinkan untuk membandingkan sudut antara bobot
+vektor[12].
+C. Uji Hipotesis
+Uji hipotesis atau disebut juga konfirmasi analisis data
+adalah cara untuk menentukan apakah suatu hasil percobaan
+baik yang terkontrol maupun hasil yang tidak terkontrol
+(observasi) signifikan secara statistik. Dalam statistik hasil
+yang signifikan jika kejadian (hasil) tersebut dikatakan tidak
+mungkin disebabkan faktor kebetulan sesuai dengan batas
+probabilitas yang sudah ditentukan sebelumnya [15].
+Uji hipotesis yang digunakan adalah pengujian hipotesis
+satu pihak dari perbedaan dua rata-rata. Sebelum pengujian
+hipotesis, dilakukan pengujian normalitas dan homogenitas
+dari nilai akurasi metode Tf-IDF dan LGN. Untuk pengujian
+normalitas digunakan uji Kolomgorov-Smirnov, sedangkan
+pengujian homogenitas menggunakan uji Levene. Setelah
+pengujian tersebut selesai, dilakukan uji perbedaan antara ratarata akurasi yang dihasilkan Tf-IDF dengan LGN. Hipotesis
+yang akan diuji adalah sebagai berikut:
+𝐻0
+∶ 𝜇1 = 𝜇2 artinya tidak terdapat perbedaan antara hasil
+peringkasan menggunakan Tf-idf dengan LGN.
+𝐻1
+∶ 𝜇1 > 𝜇2 artinya hasil peringkasan menggunakan tf-idf
+lebih baik daripada hasil peringkasan LGN.
+Dalam uji perbedaan rata-rata terdapat tiga kemungkinan
+yang terjadi. Tabel 1. menunjukkan kemungkinan pengujian
+hasil uji perbedaan rata-rata. Jika data berdistribusi normal dan
+homogen maka digunakan uji-t. Jika data berdistribusi normal
+dan tidak homogen maka digunakan uji-t’ dan jika data tidak
+berdistribusi normal maka digunakan uji non parametrik yaitu
+Mann-Whitney U. Seluruh perhitungan pengujian tersebut
+dilakukan dengan menggunakan program komputer SPSS versi
+12.0.
+Untuk pengujian normalitas digunakan uji Kolmogorov
+Smirnov satu sampel. Adapun pengujian Kolmogorov-Smirnov
+dapat dilihat pada persamaan (6) sebagai berikut:
+H0: Data sampel mengikuti distribusi populasi yang diuji
+H1: Data sampel tidak mengikuti distribusi populasi yang diuji
+Statistik ujinya sebagai berikut:
+dimana 𝐹0
+(𝑋) adalah fungsi distribusi frekuensi kumulatif
+yang akan diuji (pada kasus ini adalah fungsi distribusi
+kumulatif normal). 𝑆𝑁(𝑋) adalah fungsi distribusi frekuensi
+kumulatif yang diobservasi dari suatu sampel random dengan
+N observasi. X adalah sembarang skor yang mungkin,
+𝑆𝑁(𝑋) =
+𝑘
+𝑁
+, dimana k adalah banyak observasi yang sama atau
+kurang dari X [19].Kriteria pengujian: 𝐻𝑜 ditolak jika D > Kolmogorov𝑡𝑎𝑏𝑒�
+Pengujian homogenitas dilakukan dengan menggunakan uji
+Levene. Adapun pengujian Levene adalah sebagai berikut:
+𝐻0
+: 𝜎1
+2 = 𝜎2
+2 = ⋯ = 𝜎𝑘
+2
+𝐻1
+: paling sedikit ada satu 𝜎𝑖
+2
+yang tidak sama
+Statistik uji dapat dilihat pada persamaan (7) sebagai berikut:
+Dimana 𝑁 adalah jumlah observasi, k adalah banyak
+kelompok, 𝑍𝑖𝑗 = |𝑌𝑖𝑗 − 𝑌𝑖.
+̅ |, dimana 𝑌𝑖.
+̅ Adalah rata-rata dari
+kelompok ke-i. 𝑍𝑖.
+̅̅̅ adalah rata-rata kelompok dari 𝑍𝑖.
+, 𝑍..
+̅ adalah
+rata-rata menyeluruh dari 𝑍𝑖𝑗[20].
+Kriteria pengujian: 𝐻𝑜 ditolak jika 𝑊 > F(𝛼;𝑘−1,𝑛−𝑘)
+Seperti dijelaskan pada Tabel 1. maka jika data
+berdistribusi normal dan homogen, maka pengujian hipotesis
+perbedaan dua rata-rata menggunakan uji-t, berikut adalah
+statistik ujinya dapat dilihat pada persamaan (8) dan (9):
+dengan
+Dengan taraf nyata 𝛼, maka kriteria pengujian adalah:
+terima 𝐻0
+jika −𝑡
+1−
+1
+2
+𝜎
+< 𝑡 < 𝑡
+1−
+1
+2
+𝜎
+dimana 𝑡
+1−
+1
+2
+𝜎
+didapat dari
+daftar student dengan 𝑑𝑘 = 𝑛1 + 𝑛2 − 2 peluang 1 −
+1
+2
+𝛼.
+Dalam hal lainnya 𝐻0 ditolak.
+Jika maka jika data berdistribusi normal dan tidak
+homogen, maka pengujian hipotesis perbedaan dua rata-rata
+menggunakan uji-t’, berikut adalah statistik ujinya pada
+persamaan (10):
+Dengan taraf nyata 𝛼, maka kriteria pengujian adalah terima
+𝐻0
+jika (lihat persamaan 11):
+Dengan: 𝑤𝑖 =
+𝑠𝑖
+2
+𝑛𝑖
+dan 𝑡𝑖 = 𝑡
+(1−
+1
+2
+𝛼),(𝑛𝑖−1)
+dengan i = 1, 2.
+Dalam hal lainnya 𝐻0 ditolak[21]. Jika maka jika data tidak
+berdistribusi normal maka pengujian hipotesis perbedaan dua
+rata-rata menggunakan uji Mann withney U, berikut adalah
+statistik ujinya, lihat persamaan 12.
+𝑈1 = 𝑛1𝑛2 +
+𝑛2
+(𝑛2+1)
+2
+− ∑ 𝑅2
+(12)
+Dan 𝑈2 = 𝑛1𝑛2 − 𝑈1
+Dimana 𝑛𝑖adalah jumlah sampel ke -i, ∑ 𝑅2 adalah jumlah
+rangking ke-2, lihat persamaan 13.
+𝑍 =
+𝑈−
+𝑛1𝑛2
+2
+√
+𝑛1𝑛2(𝑛1+𝑛2+1)
+12
+(13)
+Dimana U dapat dipilih antara 𝑈1 atau 𝑈2
+, hasil penggunaan
+salah satunya akan menghasilkan negatif dari yang lainnya.
+Dengan taraf nyata 𝛼, maka kriteria pengujian adalah: terima
+𝐻0
+jika −𝑧1
+2
+⁄ (1−𝛼) < 𝑧 < 𝑧1
+2
+⁄ (1−𝛼)
+dimana 𝑧1
+2
+⁄ (1−𝛼)
+didapat
+dari daftar normal baku dengan peluang 1
+2
+⁄ (1 − 𝛼). Dalam
+hal lainnya 𝐻0 ditolak [22].
+III. HASIL DAN DISKUSI
+Dalam penelitian ini dokumen yang digunakan adalah latar
+belakang skripsi mahasiswa teknik informatika. Deskripsi data
+yang digunakan dapat dilihat pada Tabel 2.
+TABEL 2. DESKRIPSI DATASET
+N Min Max Mean Standar
+Deviasi
+Tfidf 100 0,31 0,93 0,6104 0,12734
+LGN 100 0,25 0,86 0,6109 0,12931
+Valid N (listwise) 100
+Dapat dilihat dari tabel 2 bahwa rata-rata dan standar
+deviasi akurasi untuk tf-idf adalah 0,6107 atau 61,07% dan
+0,1273 sedangkan untuk LGN diperoleh 0,6109 atau 61,09%
+dan 0,1293. Jika dilihat dari hasil deskripsi data yaitu rata-rata
+dan standar deviasi, TFIDF lebih baik dibandingkan LGN
+dikarenakan standar deviasi TFIDF lebih kecil dibandingkan
+LGN. Hasil ini akan diperkuat dengan pengujian hipotesis,
+tetapi data set akan diuji normalitas terlebih dahulu. Pengujian
+pertama dilakukan terhadap data hasil akurasi tf-idf dengan
+hipotesis sebagai berikut:
+H0: Data sampel berasal dari populasi berdistribusi normal
+H1: Data sampel berasal dari populasi yang tidak
+berdistribusi normal
+Kriteria uji: "signifikansi" >0,05 maka H0 diterima
+Pengujian dilakukan dengan menggunakan bantuan software
+IBM SPSS versi 23 dengan output pada Tabel 3.
+TABEL 3. HASIL UJI KOLMOGOROV-SMIRNOV
+Tf-Idf
+N 100
+Normal Parameter Mean 0,6104
+Standar deviation 0,12734
+Most extreme differences Absolute 0,110
+Positive 0,056
+Negative -0,110
+Test Statistic 0,110
+Asymp. Sig (2-tailed) 0,005
+Berdasarkan Tabel 3, hasil uji Kolmogorov-Smirnov, nilai
+signifikansi yang diperoleh yaitu 0,005 untuk metode Tf-Idf
+maka berdasarkan kriteria uji H0 ditolak, sehingga dapat
+disimpulkan bahwa data akurasi hasil dari metode Tf-Idf
+berasal dari populasi yang tidak berdistribusi normal. 
+Uji normalitas juga dilakukan terhadap data set hasil
+akurasi LGN, berikut adalah hipotesisnya:
+H0: Data sampel berasal dari populasi berdistribusi normal
+H1: Data sampel berasal dari populasi yang tidak
+berdistribusi normal
+Kriteria uji: "signifikansi">0,05 maka H0 diterima
+TABEL 4. HASIL UJI KOLMOGOROV-SMIRNOV
+LGN
+N 100
+Normal Parameter Mean 0,6109
+Standar deviation 0,12931
+Most extreme differences Absolute 0,079
+Positive 0,54
+Negative -0,079
+Test Statistic 0,079
+Asymp. Sig (2-tailed) 0,131
+Berdasarkan Tabel 4, hasil uji Kolmogorov-Smirnov, nilai
+signifikansi yang diperoleh yaitu 0,131 untuk metode LGN
+maka berdasarkan kriteria uji H0 diterima. Sehingga dapat
+disimpulkan bahwa data akurasi hasil dari metode LGN berasal
+dari populasi yang berdistribusi normal. Setelah dilakukan uji
+normalitas, pada Tabel 3 dan Tabel 4 menunjukkan normalitas
+yang berbeda antara hasil akurasi Tf-Idf dan LGN.
+Berdasarkan Tabel 1, maka pengujian hipotesis perlu dilakukan
+dengan menggunakan uji hipotesis Mann-Whitney U.
+TABEL 5. HASIL UJI HIPOTESIS MANN-WHITNEY U
+Tf-Idf
+Mann-Whitney U 4985.500
+Wilcoxon W 10035.500
+Z -0,035
+Asymp. Sig. (2-tailed) 0,972
+Pada Tabel 5. Ditunjukkan hasil pengujian menggunakan
+uji hipotesis Mann-Whitney U yang menunjukkan signifikasi
+lebih besar dari 0,05. Hal tersebut dapat disimpulkan bahwa H0
+diterima atau peringkasan hasil Tf-Idf sama dengan hasil
+peringkasan LGN.
+IV. KESIMPULAN
+Sejumlah penelitian dalam peringkasan dokumen
+menyatakan bahwa peringkasan menggunakan ekstraksi
+kalimat Tf-Idf lebih baik. Akan tetapi penelitian lain pun
+menunjukkan hal yang bertolak belakang. Dalam penelitian ini
+hipotesis bahwa hasil peringkasan Tf-Idf lebih baik daripada
+hasil peringkasan menggunakan skema LGN diuji
+menggunakan metode uji hipotesis non-parametrik MannWhitney U. Hasil pengujian menunjukkan bahwa hasil
+peringkasan Tf-Idf tidak secara signifikan menunjukkan
+keunggulan dibandingkan dengan hasil peringkasan skema
+LGN.
+Penelitian ini merupakan bagian dari penelitian dosen
+pemula (PDP) tahun 2016 dengan judul Klasifikasi Dokumen
+Skripsi Menggunakan Support Vector Machine. Ucapan terima
+kasih kepada Dikti khususnya DIPA Direktorat Penelitian
+Pengabdian kepada Masyarakat Kementrian Pendidikan dan
+Kebudayaan yang memberikan dukungan materil atas
+terlaksananya penelitian ini dan kepada Balai Bahasa Jawa
+Barat atas bantuannya dalam memvalidasi hasil pengujian
+ringkasan yang telah dilakukan. 
+
+
+
+
